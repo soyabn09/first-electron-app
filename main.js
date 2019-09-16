@@ -43,19 +43,7 @@ function Second(){
 }
 
 function Third(){
-    thirdWindow = new BrowserWindow({
-        width: 300,
-        height: 200,
-        title: 'Third Window'
-    });
-    thirdWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'thirdWindow.html'),
-        protocol:'file',
-        slashes: true
-    }));
-    thirdWindow.on('close', function(){
-        thirdWindow = null;
-    });
+    
 }
 
 const mainMenuTemplate = [

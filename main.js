@@ -4,7 +4,7 @@ const path = require('path');
 
 const {app, BrowserWindow, Menu} = electron;
 
-const DEVELOPER = 1;
+const DEVELOPER = 0;
 
 let mainWindow;
 let secondWindow;
@@ -43,7 +43,19 @@ function Second(){
 }
 
 function Third(){
-    
+    thirdWindow = new BrowserWindow({
+        width: 300,
+        height: 200,
+        title: 'Third Window'
+    });
+    thirdWindow.loadURL(url.format({
+        pathname: path.join(__dirname, 'thirdWindow.html'),
+        protocol:'file',
+        slashes: true
+    }));
+    thirdWindow.on('close', function(){
+        thirdWindow = null;
+    });
 }
 
 const mainMenuTemplate = [

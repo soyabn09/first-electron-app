@@ -12,7 +12,7 @@
   "author": "Soyab Nandhla",
   "license": "MIT",
   "dependencies": {
-    "electron": "^11.4.4"
+    "electron": "^12.2.0"
   },
   "devDependencies": {
     "electron-package": "^0.1.0",
